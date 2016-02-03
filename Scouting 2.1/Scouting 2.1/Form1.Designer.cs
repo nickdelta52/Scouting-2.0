@@ -32,10 +32,12 @@
             this.ptScout = new System.Windows.Forms.TabPage();
             this.ptMatch = new System.Windows.Forms.TabPage();
             this.tbView = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.LBLPitTeam = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chkPitDef = new System.Windows.Forms.CheckedListBox();
+            this.txtPitTeams = new System.Windows.Forms.TextBox();
+            this.LBLPitGoals = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.ptScout.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +47,7 @@
             this.tabControl1.Controls.Add(this.ptScout);
             this.tabControl1.Controls.Add(this.ptMatch);
             this.tabControl1.Controls.Add(this.tbView);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(-1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -53,10 +56,11 @@
             // 
             // ptScout
             // 
+            this.ptScout.Controls.Add(this.LBLPitGoals);
+            this.ptScout.Controls.Add(this.txtPitTeams);
             this.ptScout.Controls.Add(this.chkPitDef);
             this.ptScout.Controls.Add(this.label1);
             this.ptScout.Controls.Add(this.LBLPitTeam);
-            this.ptScout.Controls.Add(this.comboBox1);
             this.ptScout.Location = new System.Drawing.Point(4, 25);
             this.ptScout.Name = "ptScout";
             this.ptScout.Padding = new System.Windows.Forms.Padding(3);
@@ -83,14 +87,6 @@
             this.tbView.TabIndex = 2;
             this.tbView.Text = "View Results";
             this.tbView.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(94, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 0;
             // 
             // LBLPitTeam
             // 
@@ -131,6 +127,32 @@
             this.chkPitDef.Size = new System.Drawing.Size(153, 193);
             this.chkPitDef.TabIndex = 3;
             // 
+            // txtPitTeams
+            // 
+            this.txtPitTeams.Location = new System.Drawing.Point(94, 50);
+            this.txtPitTeams.Name = "txtPitTeams";
+            this.txtPitTeams.Size = new System.Drawing.Size(100, 22);
+            this.txtPitTeams.TabIndex = 4;
+            // 
+            // LBLPitGoals
+            // 
+            this.LBLPitGoals.AutoSize = true;
+            this.LBLPitGoals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LBLPitGoals.Location = new System.Drawing.Point(32, 344);
+            this.LBLPitGoals.Name = "LBLPitGoals";
+            this.LBLPitGoals.Size = new System.Drawing.Size(53, 20);
+            this.LBLPitGoals.TabIndex = 5;
+            this.LBLPitGoals.Text = "label2";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1025, 623);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Seach Team";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -155,7 +177,9 @@
         private System.Windows.Forms.CheckedListBox chkPitDef;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LBLPitTeam;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label LBLPitGoals;
+        private System.Windows.Forms.TextBox txtPitTeams;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }
 
