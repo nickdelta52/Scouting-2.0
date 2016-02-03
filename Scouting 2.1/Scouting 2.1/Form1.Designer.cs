@@ -30,6 +30,16 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ptScout = new System.Windows.Forms.TabPage();
+            this.txtPitNote = new System.Windows.Forms.RichTextBox();
+            this.LBLPitNote = new System.Windows.Forms.Label();
+            this.txtPitSB = new System.Windows.Forms.RichTextBox();
+            this.LBLPitSB = new System.Windows.Forms.Label();
+            this.txtPitIntake = new System.Windows.Forms.RichTextBox();
+            this.LBLPitIntake = new System.Windows.Forms.Label();
+            this.txtPitDT = new System.Windows.Forms.RichTextBox();
+            this.LBLPitDT = new System.Windows.Forms.Label();
+            this.chkPitStartPos = new System.Windows.Forms.CheckedListBox();
+            this.LBLPitStart = new System.Windows.Forms.Label();
             this.chkPitHPS = new System.Windows.Forms.CheckBox();
             this.chkPitClimb = new System.Windows.Forms.CheckBox();
             this.chkPitGoals = new System.Windows.Forms.CheckedListBox();
@@ -41,16 +51,10 @@
             this.ptMatch = new System.Windows.Forms.TabPage();
             this.tbSort = new System.Windows.Forms.TabPage();
             this.tbSearch = new System.Windows.Forms.TabPage();
-            this.LBLPitStart = new System.Windows.Forms.Label();
-            this.chkPitStartPos = new System.Windows.Forms.CheckedListBox();
-            this.LBLPitDT = new System.Windows.Forms.Label();
-            this.txtPitDT = new System.Windows.Forms.RichTextBox();
-            this.txtPitIntake = new System.Windows.Forms.RichTextBox();
-            this.LBLPitIntake = new System.Windows.Forms.Label();
-            this.txtPitSB = new System.Windows.Forms.RichTextBox();
-            this.LBLPitSB = new System.Windows.Forms.Label();
-            this.txtPitNote = new System.Windows.Forms.RichTextBox();
-            this.LBLPitNote = new System.Windows.Forms.Label();
+            this.LBLPitComp = new System.Windows.Forms.Label();
+            this.cmbPitComp = new System.Windows.Forms.ComboBox();
+            this.btnPitSubmit = new System.Windows.Forms.Button();
+            this.btnPitSelect = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.ptScout.SuspendLayout();
             this.SuspendLayout();
@@ -62,13 +66,19 @@
             this.tabControl1.Controls.Add(this.tbSort);
             this.tabControl1.Controls.Add(this.tbSearch);
             this.tabControl1.Location = new System.Drawing.Point(-1, 1);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1033, 652);
+            this.tabControl1.Size = new System.Drawing.Size(1217, 786);
             this.tabControl1.TabIndex = 0;
             // 
             // ptScout
             // 
+            this.ptScout.BackColor = System.Drawing.Color.LimeGreen;
+            this.ptScout.Controls.Add(this.btnPitSelect);
+            this.ptScout.Controls.Add(this.btnPitSubmit);
+            this.ptScout.Controls.Add(this.cmbPitComp);
+            this.ptScout.Controls.Add(this.LBLPitComp);
             this.ptScout.Controls.Add(this.txtPitNote);
             this.ptScout.Controls.Add(this.LBLPitNote);
             this.ptScout.Controls.Add(this.txtPitSB);
@@ -88,18 +98,123 @@
             this.ptScout.Controls.Add(this.label1);
             this.ptScout.Controls.Add(this.LBLPitTeam);
             this.ptScout.Location = new System.Drawing.Point(4, 25);
+            this.ptScout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ptScout.Name = "ptScout";
-            this.ptScout.Padding = new System.Windows.Forms.Padding(3);
-            this.ptScout.Size = new System.Drawing.Size(1025, 623);
+            this.ptScout.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptScout.Size = new System.Drawing.Size(1209, 757);
             this.ptScout.TabIndex = 0;
             this.ptScout.Text = "Pit Scouting";
-            this.ptScout.UseVisualStyleBackColor = true;
+            // 
+            // txtPitNote
+            // 
+            this.txtPitNote.Location = new System.Drawing.Point(47, 455);
+            this.txtPitNote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPitNote.Name = "txtPitNote";
+            this.txtPitNote.Size = new System.Drawing.Size(581, 197);
+            this.txtPitNote.TabIndex = 18;
+            this.txtPitNote.Text = "";
+            // 
+            // LBLPitNote
+            // 
+            this.LBLPitNote.AutoSize = true;
+            this.LBLPitNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LBLPitNote.Location = new System.Drawing.Point(41, 426);
+            this.LBLPitNote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBLPitNote.Name = "LBLPitNote";
+            this.LBLPitNote.Size = new System.Drawing.Size(58, 20);
+            this.LBLPitNote.TabIndex = 17;
+            this.LBLPitNote.Text = "Notes:";
+            // 
+            // txtPitSB
+            // 
+            this.txtPitSB.Location = new System.Drawing.Point(664, 155);
+            this.txtPitSB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPitSB.Name = "txtPitSB";
+            this.txtPitSB.Size = new System.Drawing.Size(510, 138);
+            this.txtPitSB.TabIndex = 16;
+            this.txtPitSB.Text = "";
+            // 
+            // LBLPitSB
+            // 
+            this.LBLPitSB.AutoSize = true;
+            this.LBLPitSB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LBLPitSB.Location = new System.Drawing.Point(659, 126);
+            this.LBLPitSB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBLPitSB.Name = "LBLPitSB";
+            this.LBLPitSB.Size = new System.Drawing.Size(165, 20);
+            this.LBLPitSB.TabIndex = 15;
+            this.LBLPitSB.Text = "Spy Bot Capabilities:";
+            // 
+            // txtPitIntake
+            // 
+            this.txtPitIntake.Location = new System.Drawing.Point(664, 329);
+            this.txtPitIntake.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPitIntake.Name = "txtPitIntake";
+            this.txtPitIntake.Size = new System.Drawing.Size(510, 138);
+            this.txtPitIntake.TabIndex = 14;
+            this.txtPitIntake.Text = "";
+            // 
+            // LBLPitIntake
+            // 
+            this.LBLPitIntake.AutoSize = true;
+            this.LBLPitIntake.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LBLPitIntake.Location = new System.Drawing.Point(659, 299);
+            this.LBLPitIntake.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBLPitIntake.Name = "LBLPitIntake";
+            this.LBLPitIntake.Size = new System.Drawing.Size(58, 20);
+            this.LBLPitIntake.TabIndex = 13;
+            this.LBLPitIntake.Text = "Intake:";
+            // 
+            // txtPitDT
+            // 
+            this.txtPitDT.Location = new System.Drawing.Point(664, 514);
+            this.txtPitDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPitDT.Name = "txtPitDT";
+            this.txtPitDT.Size = new System.Drawing.Size(510, 138);
+            this.txtPitDT.TabIndex = 12;
+            this.txtPitDT.Text = "";
+            // 
+            // LBLPitDT
+            // 
+            this.LBLPitDT.AutoSize = true;
+            this.LBLPitDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LBLPitDT.Location = new System.Drawing.Point(659, 485);
+            this.LBLPitDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBLPitDT.Name = "LBLPitDT";
+            this.LBLPitDT.Size = new System.Drawing.Size(97, 20);
+            this.LBLPitDT.TabIndex = 11;
+            this.LBLPitDT.Text = "Drive Train:";
+            // 
+            // chkPitStartPos
+            // 
+            this.chkPitStartPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkPitStartPos.FormattingEnabled = true;
+            this.chkPitStartPos.Items.AddRange(new object[] {
+            "Middle",
+            "Spy"});
+            this.chkPitStartPos.Location = new System.Drawing.Point(321, 249);
+            this.chkPitStartPos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkPitStartPos.Name = "chkPitStartPos";
+            this.chkPitStartPos.Size = new System.Drawing.Size(201, 67);
+            this.chkPitStartPos.TabIndex = 10;
+            // 
+            // LBLPitStart
+            // 
+            this.LBLPitStart.AutoSize = true;
+            this.LBLPitStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LBLPitStart.Location = new System.Drawing.Point(316, 220);
+            this.LBLPitStart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBLPitStart.Name = "LBLPitStart";
+            this.LBLPitStart.Size = new System.Drawing.Size(184, 20);
+            this.LBLPitStart.TabIndex = 9;
+            this.LBLPitStart.Text = "Prefered Start Position:";
             // 
             // chkPitHPS
             // 
             this.chkPitHPS.AutoSize = true;
             this.chkPitHPS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.chkPitHPS.Location = new System.Drawing.Point(242, 295);
+            this.chkPitHPS.Location = new System.Drawing.Point(323, 363);
+            this.chkPitHPS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPitHPS.Name = "chkPitHPS";
             this.chkPitHPS.Size = new System.Drawing.Size(249, 24);
             this.chkPitHPS.TabIndex = 8;
@@ -111,7 +226,8 @@
             // 
             this.chkPitClimb.AutoSize = true;
             this.chkPitClimb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.chkPitClimb.Location = new System.Drawing.Point(241, 265);
+            this.chkPitClimb.Location = new System.Drawing.Point(321, 326);
+            this.chkPitClimb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPitClimb.Name = "chkPitClimb";
             this.chkPitClimb.Size = new System.Drawing.Size(109, 24);
             this.chkPitClimb.TabIndex = 7;
@@ -126,16 +242,18 @@
             this.chkPitGoals.Items.AddRange(new object[] {
             "High",
             "Goal"});
-            this.chkPitGoals.Location = new System.Drawing.Point(241, 126);
+            this.chkPitGoals.Location = new System.Drawing.Point(321, 155);
+            this.chkPitGoals.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPitGoals.Name = "chkPitGoals";
-            this.chkPitGoals.Size = new System.Drawing.Size(152, 46);
+            this.chkPitGoals.Size = new System.Drawing.Size(201, 67);
             this.chkPitGoals.TabIndex = 6;
             // 
             // LBLPitGoals
             // 
             this.LBLPitGoals.AutoSize = true;
             this.LBLPitGoals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.LBLPitGoals.Location = new System.Drawing.Point(238, 103);
+            this.LBLPitGoals.Location = new System.Drawing.Point(317, 127);
+            this.LBLPitGoals.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLPitGoals.Name = "LBLPitGoals";
             this.LBLPitGoals.Size = new System.Drawing.Size(58, 20);
             this.LBLPitGoals.TabIndex = 5;
@@ -143,9 +261,10 @@
             // 
             // txtPitTeams
             // 
-            this.txtPitTeams.Location = new System.Drawing.Point(94, 50);
+            this.txtPitTeams.Location = new System.Drawing.Point(105, 60);
+            this.txtPitTeams.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPitTeams.Name = "txtPitTeams";
-            this.txtPitTeams.Size = new System.Drawing.Size(100, 22);
+            this.txtPitTeams.Size = new System.Drawing.Size(132, 22);
             this.txtPitTeams.TabIndex = 4;
             // 
             // chkPitDef
@@ -162,16 +281,18 @@
             "Rock Wall",
             "Rough Terrain",
             "Low Bar"});
-            this.chkPitDef.Location = new System.Drawing.Point(35, 126);
+            this.chkPitDef.Location = new System.Drawing.Point(47, 155);
+            this.chkPitDef.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPitDef.Name = "chkPitDef";
-            this.chkPitDef.Size = new System.Drawing.Size(153, 193);
+            this.chkPitDef.Size = new System.Drawing.Size(203, 214);
             this.chkPitDef.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(31, 102);
+            this.label1.Location = new System.Drawing.Point(41, 126);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 2;
@@ -181,7 +302,8 @@
             // 
             this.LBLPitTeam.AutoSize = true;
             this.LBLPitTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.LBLPitTeam.Location = new System.Drawing.Point(31, 50);
+            this.LBLPitTeam.Location = new System.Drawing.Point(41, 62);
+            this.LBLPitTeam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLPitTeam.Name = "LBLPitTeam";
             this.LBLPitTeam.Size = new System.Drawing.Size(56, 20);
             this.LBLPitTeam.TabIndex = 1;
@@ -189,134 +311,80 @@
             // 
             // ptMatch
             // 
+            this.ptMatch.BackColor = System.Drawing.Color.IndianRed;
             this.ptMatch.Location = new System.Drawing.Point(4, 25);
+            this.ptMatch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ptMatch.Name = "ptMatch";
-            this.ptMatch.Padding = new System.Windows.Forms.Padding(3);
-            this.ptMatch.Size = new System.Drawing.Size(1025, 623);
+            this.ptMatch.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptMatch.Size = new System.Drawing.Size(1209, 757);
             this.ptMatch.TabIndex = 1;
             this.ptMatch.Text = "Match scouting";
-            this.ptMatch.UseVisualStyleBackColor = true;
             // 
             // tbSort
             // 
+            this.tbSort.BackColor = System.Drawing.Color.CornflowerBlue;
             this.tbSort.Location = new System.Drawing.Point(4, 25);
+            this.tbSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbSort.Name = "tbSort";
-            this.tbSort.Size = new System.Drawing.Size(1025, 623);
+            this.tbSort.Size = new System.Drawing.Size(1209, 757);
             this.tbSort.TabIndex = 2;
             this.tbSort.Text = "Sort Teams";
-            this.tbSort.UseVisualStyleBackColor = true;
             // 
             // tbSearch
             // 
+            this.tbSearch.BackColor = System.Drawing.Color.MediumOrchid;
             this.tbSearch.Location = new System.Drawing.Point(4, 25);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(1025, 623);
+            this.tbSearch.Size = new System.Drawing.Size(1209, 757);
             this.tbSearch.TabIndex = 3;
             this.tbSearch.Text = "Seach Team";
-            this.tbSearch.UseVisualStyleBackColor = true;
             // 
-            // LBLPitStart
+            // LBLPitComp
             // 
-            this.LBLPitStart.AutoSize = true;
-            this.LBLPitStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.LBLPitStart.Location = new System.Drawing.Point(237, 179);
-            this.LBLPitStart.Name = "LBLPitStart";
-            this.LBLPitStart.Size = new System.Drawing.Size(184, 20);
-            this.LBLPitStart.TabIndex = 9;
-            this.LBLPitStart.Text = "Prefered Start Position:";
+            this.LBLPitComp.AutoSize = true;
+            this.LBLPitComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LBLPitComp.Location = new System.Drawing.Point(664, 4);
+            this.LBLPitComp.Name = "LBLPitComp";
+            this.LBLPitComp.Size = new System.Drawing.Size(103, 20);
+            this.LBLPitComp.TabIndex = 19;
+            this.LBLPitComp.Text = "Competition:";
             // 
-            // chkPitStartPos
+            // cmbPitComp
             // 
-            this.chkPitStartPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.chkPitStartPos.FormattingEnabled = true;
-            this.chkPitStartPos.Items.AddRange(new object[] {
-            "Middle",
-            "Spy"});
-            this.chkPitStartPos.Location = new System.Drawing.Point(241, 202);
-            this.chkPitStartPos.Name = "chkPitStartPos";
-            this.chkPitStartPos.Size = new System.Drawing.Size(152, 46);
-            this.chkPitStartPos.TabIndex = 10;
+            this.cmbPitComp.FormattingEnabled = true;
+            this.cmbPitComp.Location = new System.Drawing.Point(773, 5);
+            this.cmbPitComp.Name = "cmbPitComp";
+            this.cmbPitComp.Size = new System.Drawing.Size(121, 24);
+            this.cmbPitComp.TabIndex = 20;
             // 
-            // LBLPitDT
+            // btnPitSubmit
             // 
-            this.LBLPitDT.AutoSize = true;
-            this.LBLPitDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.LBLPitDT.Location = new System.Drawing.Point(494, 394);
-            this.LBLPitDT.Name = "LBLPitDT";
-            this.LBLPitDT.Size = new System.Drawing.Size(97, 20);
-            this.LBLPitDT.TabIndex = 11;
-            this.LBLPitDT.Text = "Drive Train:";
+            this.btnPitSubmit.Location = new System.Drawing.Point(47, 673);
+            this.btnPitSubmit.Name = "btnPitSubmit";
+            this.btnPitSubmit.Size = new System.Drawing.Size(175, 65);
+            this.btnPitSubmit.TabIndex = 21;
+            this.btnPitSubmit.Text = "Submit Data";
+            this.btnPitSubmit.UseVisualStyleBackColor = true;
             // 
-            // txtPitDT
+            // btnPitSelect
             // 
-            this.txtPitDT.Location = new System.Drawing.Point(498, 418);
-            this.txtPitDT.Name = "txtPitDT";
-            this.txtPitDT.Size = new System.Drawing.Size(486, 113);
-            this.txtPitDT.TabIndex = 12;
-            this.txtPitDT.Text = "";
-            // 
-            // txtPitIntake
-            // 
-            this.txtPitIntake.Location = new System.Drawing.Point(498, 267);
-            this.txtPitIntake.Name = "txtPitIntake";
-            this.txtPitIntake.Size = new System.Drawing.Size(486, 113);
-            this.txtPitIntake.TabIndex = 14;
-            this.txtPitIntake.Text = "";
-            // 
-            // LBLPitIntake
-            // 
-            this.LBLPitIntake.AutoSize = true;
-            this.LBLPitIntake.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.LBLPitIntake.Location = new System.Drawing.Point(494, 243);
-            this.LBLPitIntake.Name = "LBLPitIntake";
-            this.LBLPitIntake.Size = new System.Drawing.Size(58, 20);
-            this.LBLPitIntake.TabIndex = 13;
-            this.LBLPitIntake.Text = "Intake:";
-            // 
-            // txtPitSB
-            // 
-            this.txtPitSB.Location = new System.Drawing.Point(498, 126);
-            this.txtPitSB.Name = "txtPitSB";
-            this.txtPitSB.Size = new System.Drawing.Size(486, 113);
-            this.txtPitSB.TabIndex = 16;
-            this.txtPitSB.Text = "";
-            // 
-            // LBLPitSB
-            // 
-            this.LBLPitSB.AutoSize = true;
-            this.LBLPitSB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.LBLPitSB.Location = new System.Drawing.Point(494, 102);
-            this.LBLPitSB.Name = "LBLPitSB";
-            this.LBLPitSB.Size = new System.Drawing.Size(165, 20);
-            this.LBLPitSB.TabIndex = 15;
-            this.LBLPitSB.Text = "Spy Bot Capabilities:";
-            // 
-            // txtPitNote
-            // 
-            this.txtPitNote.Location = new System.Drawing.Point(35, 370);
-            this.txtPitNote.Name = "txtPitNote";
-            this.txtPitNote.Size = new System.Drawing.Size(437, 161);
-            this.txtPitNote.TabIndex = 18;
-            this.txtPitNote.Text = "";
-            // 
-            // LBLPitNote
-            // 
-            this.LBLPitNote.AutoSize = true;
-            this.LBLPitNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.LBLPitNote.Location = new System.Drawing.Point(31, 346);
-            this.LBLPitNote.Name = "LBLPitNote";
-            this.LBLPitNote.Size = new System.Drawing.Size(58, 20);
-            this.LBLPitNote.TabIndex = 17;
-            this.LBLPitNote.Text = "Notes:";
+            this.btnPitSelect.Location = new System.Drawing.Point(244, 59);
+            this.btnPitSelect.Name = "btnPitSelect";
+            this.btnPitSelect.Size = new System.Drawing.Size(75, 23);
+            this.btnPitSelect.TabIndex = 22;
+            this.btnPitSelect.Text = "Select";
+            this.btnPitSelect.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 653);
+            this.ClientSize = new System.Drawing.Size(1216, 790);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = " ";
+            this.Text = "Scouting";
             this.tabControl1.ResumeLayout(false);
             this.ptScout.ResumeLayout(false);
             this.ptScout.PerformLayout();
@@ -349,6 +417,10 @@
         private System.Windows.Forms.Label LBLPitDT;
         private System.Windows.Forms.CheckedListBox chkPitStartPos;
         private System.Windows.Forms.Label LBLPitStart;
+        private System.Windows.Forms.ComboBox cmbPitComp;
+        private System.Windows.Forms.Label LBLPitComp;
+        private System.Windows.Forms.Button btnPitSelect;
+        private System.Windows.Forms.Button btnPitSubmit;
     }
 }
 
