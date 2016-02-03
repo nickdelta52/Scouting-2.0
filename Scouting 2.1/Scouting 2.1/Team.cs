@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Scouting_2._1
 {
-    class Team
+    public class Team
     {
         public Team(int _number, string _binary)
         {
