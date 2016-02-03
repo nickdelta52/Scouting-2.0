@@ -49,6 +49,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LBLPitTeam = new System.Windows.Forms.Label();
             this.ptMatch = new System.Windows.Forms.TabPage();
+            this.btnMatchTeam = new System.Windows.Forms.Button();
+            this.lblMatchTeam = new System.Windows.Forms.Label();
+            this.tbMatchTeam = new System.Windows.Forms.TextBox();
             this.tbSort = new System.Windows.Forms.TabPage();
             this.tbSearch = new System.Windows.Forms.TabPage();
             this.LBLPitComp = new System.Windows.Forms.Label();
@@ -57,6 +60,7 @@
             this.btnPitSelect = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.ptScout.SuspendLayout();
+            this.ptMatch.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -216,7 +220,7 @@
             this.chkPitHPS.Location = new System.Drawing.Point(323, 363);
             this.chkPitHPS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPitHPS.Name = "chkPitHPS";
-            this.chkPitHPS.Size = new System.Drawing.Size(249, 24);
+            this.chkPitHPS.Size = new System.Drawing.Size(213, 21);
             this.chkPitHPS.TabIndex = 8;
             this.chkPitHPS.Text = "Require human player station";
             this.chkPitHPS.UseVisualStyleBackColor = true;
@@ -229,7 +233,7 @@
             this.chkPitClimb.Location = new System.Drawing.Point(321, 326);
             this.chkPitClimb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPitClimb.Name = "chkPitClimb";
-            this.chkPitClimb.Size = new System.Drawing.Size(109, 24);
+            this.chkPitClimb.Size = new System.Drawing.Size(90, 21);
             this.chkPitClimb.TabIndex = 7;
             this.chkPitClimb.Text = "Can Climb";
             this.chkPitClimb.UseVisualStyleBackColor = true;
@@ -255,7 +259,7 @@
             this.LBLPitGoals.Location = new System.Drawing.Point(317, 127);
             this.LBLPitGoals.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLPitGoals.Name = "LBLPitGoals";
-            this.LBLPitGoals.Size = new System.Drawing.Size(58, 20);
+            this.LBLPitGoals.Size = new System.Drawing.Size(49, 17);
             this.LBLPitGoals.TabIndex = 5;
             this.LBLPitGoals.Text = "Goals:";
             // 
@@ -294,7 +298,7 @@
             this.label1.Location = new System.Drawing.Point(41, 126);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Defences:";
             // 
@@ -305,20 +309,50 @@
             this.LBLPitTeam.Location = new System.Drawing.Point(41, 62);
             this.LBLPitTeam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLPitTeam.Name = "LBLPitTeam";
-            this.LBLPitTeam.Size = new System.Drawing.Size(56, 20);
+            this.LBLPitTeam.Size = new System.Drawing.Size(48, 17);
             this.LBLPitTeam.TabIndex = 1;
             this.LBLPitTeam.Text = "Team:";
             // 
             // ptMatch
             // 
-            this.ptMatch.BackColor = System.Drawing.Color.IndianRed;
-            this.ptMatch.Location = new System.Drawing.Point(4, 25);
-            this.ptMatch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptMatch.BackColor = System.Drawing.Color.LightGray;
+            this.ptMatch.Controls.Add(this.lbMatchActions);
+            this.ptMatch.Controls.Add(this.btnMatchTeam);
+            this.ptMatch.Controls.Add(this.lblMatchTeam);
+            this.ptMatch.Controls.Add(this.tbMatchTeam);
+            this.ptMatch.Location = new System.Drawing.Point(4, 22);
+            this.ptMatch.Margin = new System.Windows.Forms.Padding(2);
             this.ptMatch.Name = "ptMatch";
             this.ptMatch.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ptMatch.Size = new System.Drawing.Size(1209, 757);
             this.ptMatch.TabIndex = 1;
             this.ptMatch.Text = "Match scouting";
+            // 
+            // btnMatchTeam
+            // 
+            this.btnMatchTeam.Location = new System.Drawing.Point(9, 48);
+            this.btnMatchTeam.Name = "btnMatchTeam";
+            this.btnMatchTeam.Size = new System.Drawing.Size(121, 23);
+            this.btnMatchTeam.TabIndex = 2;
+            this.btnMatchTeam.Text = "Set Team";
+            this.btnMatchTeam.UseVisualStyleBackColor = true;
+            this.btnMatchTeam.Click += new System.EventHandler(this.btnMatchTeam_Click);
+            // 
+            // lblMatchTeam
+            // 
+            this.lblMatchTeam.AutoSize = true;
+            this.lblMatchTeam.Location = new System.Drawing.Point(9, 6);
+            this.lblMatchTeam.Name = "lblMatchTeam";
+            this.lblMatchTeam.Size = new System.Drawing.Size(40, 13);
+            this.lblMatchTeam.TabIndex = 1;
+            this.lblMatchTeam.Text = "Team: ";
+            // 
+            // tbMatchTeam
+            // 
+            this.tbMatchTeam.Location = new System.Drawing.Point(9, 22);
+            this.tbMatchTeam.Name = "tbMatchTeam";
+            this.tbMatchTeam.Size = new System.Drawing.Size(121, 20);
+            this.tbMatchTeam.TabIndex = 0;
             // 
             // tbSort
             // 
@@ -368,6 +402,7 @@
             this.btnPitSubmit.UseVisualStyleBackColor = true;
             // 
             // btnPitSelect
+            // lbMatchActions
             // 
             this.btnPitSelect.Location = new System.Drawing.Point(244, 59);
             this.btnPitSelect.Name = "btnPitSelect";
@@ -375,10 +410,15 @@
             this.btnPitSelect.TabIndex = 22;
             this.btnPitSelect.Text = "Select";
             this.btnPitSelect.UseVisualStyleBackColor = true;
+            this.lbMatchActions.FormattingEnabled = true;
+            this.lbMatchActions.Location = new System.Drawing.Point(10, 78);
+            this.lbMatchActions.Name = "lbMatchActions";
+            this.lbMatchActions.Size = new System.Drawing.Size(120, 407);
+            this.lbMatchActions.TabIndex = 3;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1216, 790);
             this.Controls.Add(this.tabControl1);
@@ -388,6 +428,8 @@
             this.tabControl1.ResumeLayout(false);
             this.ptScout.ResumeLayout(false);
             this.ptScout.PerformLayout();
+            this.ptMatch.ResumeLayout(false);
+            this.ptMatch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -417,6 +459,10 @@
         private System.Windows.Forms.Label LBLPitDT;
         private System.Windows.Forms.CheckedListBox chkPitStartPos;
         private System.Windows.Forms.Label LBLPitStart;
+        private System.Windows.Forms.Button btnMatchTeam;
+        private System.Windows.Forms.Label lblMatchTeam;
+        private System.Windows.Forms.TextBox tbMatchTeam;
+        private System.Windows.Forms.ListBox lbMatchActions;
         private System.Windows.Forms.ComboBox cmbPitComp;
         private System.Windows.Forms.Label LBLPitComp;
         private System.Windows.Forms.Button btnPitSelect;
