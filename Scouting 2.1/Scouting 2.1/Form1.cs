@@ -16,5 +16,15 @@ namespace Scouting_2._1
         {
             InitializeComponent();
         }
+
+        private void chkPitClimb_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkPitHPS_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
